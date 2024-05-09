@@ -6,7 +6,6 @@ using namespace std;
 class Shape {
 public:
     virtual void draw() const = 0;  // Pure virtual function
-    virtual ~Shape() {}
 };
 
 // Concrete subclass for Circle
