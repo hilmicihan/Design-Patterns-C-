@@ -25,6 +25,7 @@ class Singleton
 
 
 };
+
 // Singleton* Singleton::instance = nullptr;
 int main()
 {
