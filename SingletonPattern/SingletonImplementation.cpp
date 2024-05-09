@@ -26,7 +26,7 @@ class Singleton
 
 };
 
-// Singleton* Singleton::instance = nullptr;
+Singleton* Singleton::instance = nullptr;
 int main()
 {
     Singleton* s1 = Singleton::getInstance("Singleton data");
