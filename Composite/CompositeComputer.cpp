@@ -4,7 +4,27 @@
 #include <string>
 
 using namespace std;
+/*
+Composite Design Pattern 🌳
 
+The Composite Design Pattern allows you to compose objects into tree structures to represent part-whole hierarchies. 
+🌲 It lets clients treat individual objects and compositions of objects uniformly,
+ making it perfect for building complex structures like organizational charts, file systems, or UI components. 🎨
+
+Benefits:
+
+Uniformity: Treat individual and composite objects the same way. 🔄
+Flexibility: Easily extend your system with new components. ➕
+Simplicity: Simplifies client code by providing a consistent interface. 💡
+Example: Imagine building a computer system where both simple components (like CPU and RAM) and 
+complex components (like a motherboard containing multiple parts) can be managed and priced uniformly. 🖥️💻
+            Computer
+            /    \
+    Motherboard   Mouse
+    /     \    \
+Ram        CPU  GPU
+
+*/
 // Abstract base class representing a computer component
 class ComputerComponent {
 public:
@@ -179,7 +199,7 @@ int main() {
     shared_ptr<ComputerComponent> ssd = make_shared<SSD>(100.0);
     shared_ptr<ComputerComponent> cpu = make_shared<CPU>(200.0);
     shared_ptr<ComputerComponent> gpu = make_shared<GPU>(300.0);
-
+    
     // Creating composite component: Motherboard
     shared_ptr<Motherboard> motherboard = make_shared<Motherboard>(150.0);
     motherboard->add(ram1);
